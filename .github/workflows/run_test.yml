@@ -18,7 +18,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          if [ -f requirements.txt ]; then pip install -r requirements.txt;
+      - name: Check code style with Black
+        run: |
+          black . --check
       - name: Lint with Ruff
         run: |
           pip install ruff
@@ -32,3 +35,7 @@ jobs:
       - name: Generate Coverage Report
         run: |
           coverage report -m
+
+
+
+
