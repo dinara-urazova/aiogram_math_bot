@@ -6,7 +6,7 @@ class Settings(BaseSettings):
 
     telegram_token: SecretStr
 
-    model_config = SettingsConfigDict(env_file=".env")
+    model_config = SettingsConfigDict(env_file="bot/.env")
 
 
 env_config = Settings()
