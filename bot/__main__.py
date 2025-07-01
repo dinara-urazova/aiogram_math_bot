@@ -100,7 +100,7 @@ async def second_handler(message: Message, state: FSMContext):
         return
     data = await state.get_data()
     first_num = float(data["first"])
-    operation = data.get("operation")
+    operation = data["operation"]
     second_num = float(value)
 
     if operation == "add":
